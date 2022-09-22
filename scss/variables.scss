@@ -1,0 +1,46 @@
+/*
+
+.flex_s_b{
+    justify-content: space-between; 
+}
+
+
+*/
+$yellowColor:#FFCA42;
+$themeMargin: 0 auto;
+$headerText: #F6F8FC;
+$buttonText: #1B3764;
+
+.flexRow{
+    display: flex;
+    flex-direction: row;
+}
+
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    margin: $themeMargin;
+}
+
+
+.button{
+    display: inline-block;
+    box-sizing: border-box;
+    font-family: Cardo;
+            font-size:19px;
+            text-transform: capitalize;
+            color: $buttonText;
+         
+            line-height: 28px;
+            letter-spacing: 0.57px;
+    text-decoration: none;
+   
+}
+
+.button_yellow{
+    background-color: $yellowColor;
+    border: 2px solid #FFCA42;
+}
