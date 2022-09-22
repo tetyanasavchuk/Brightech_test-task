@@ -5,28 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Test</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+    <link href="./style.css" rel="stylesheet" />
   </head>
   <body class="body">
-    <header class="header">
-      <div class="logo">      
+    <header class="header flex_row flex_s_b">
+      <div class="header_left-block flex_row flex_s_b">
         <img class="logo_img" src="./images/logo.png" alt="book" />
-        <p class="logo_text">Pages</div>
+
+        <div class="social">
+          <img class="social_img" src="./images/facebook-icon (2).png" alt="" class="" />
+          <img class="social_img" src="./images/twitter-icon (2).png" alt="" class="" />
+          <img class="social_img" src="./images/linkedin-icon (2).png" alt="" class="" />
+        </div>
       </div>
-      <div class="social-icon">        
-            <img class="social-icon_img" src="./images/facebook-icon (2).png" alt="" class="">
-            <img class="social-icon_img" src="./images/twitter-icon (2).png" alt="" class="">
-            <img class="social-icon_img" src="./images/linkedin-icon (2).png" alt="" class="">
-           </div>
-           <div class="header_menu">
-               <div class="header_menu_list">
-                   <p class="header_menu_item">Home</p>
-                   <p class="header_menu_item">About</p>
-                   <p class="header_menu_item">Pages</p>
-                   <p class="header_menu_item">Contact us</p>
-               </div>
-               <img class="header_menu_card" src="./images/shopping-card_icon.png">
-           </div>
+      <div class="header_menu flex_row flex_s_b">
+        <div class="header_menu_list flex_row flex_s_b">
+          <p class="header_menu_item yellow-text">Home</p>
+          <p class="header_menu_item white-text">About</p>
+          <p class="header_menu_item white-text">Pages</p>
+          <p class="header_menu_item white-text">Contact us</p>
+        </div>
+        <img class="header_menu_card" src="./images/shopping-card_icon.png" />
+
+        <button class="header_menu_button">Order Today</button>
+      </div>
     </header>
     <div class="container"></div>
     <footer class="footer"></footer>
