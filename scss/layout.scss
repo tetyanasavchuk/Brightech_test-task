@@ -7,7 +7,7 @@
 .body {
   height: 100%;
   min-width: 100vw;
-  font-family: Inter;
+  font-family: $interFontF;
 }
 
 .wrapper {
@@ -17,7 +17,7 @@
 }
 
 .header {
-  background-color: #1b3764;
+  background-color: $blueBackgroundC;
   top: 0;
   left: 0;
   width: 100%;
@@ -143,6 +143,101 @@
 
 .main {
   flex-grow: 1;
+  margin-top: 110px;
+  .welcome {
+    background-color: $blueBackgroundC;
+
+    &_container {
+      @extend .container;
+      padding-top: 40px;
+      @extend .flexRow;
+      justify-content: space-between;
+
+      .welcome_content {
+        @extend .flexColumn;
+        color: $whiteColor;
+        width: 560px;
+        padding-left: 20px;
+        padding-top: 150px;
+
+        .welcome_content_block {
+          @extend .flexColumn;
+
+          .block_subtitle {
+            height: 36px;
+            font-family: $cardoFontF;
+            font-weight: 400;
+            font-size: 21px;
+            line-height: 36px;
+            letter-spacing: 1.2px;
+            text-transform: capitalize;
+            padding-left: 45px;
+          }
+
+          .block_title {
+            font-family: $cardoFontF;
+            font-size: 63px;
+            line-height: 78px;
+            letter-spacing: 1.3px;
+            text-transform: capitalize;
+            font-weight: 400;
+            padding: 10px 0 24px 0px;
+          }
+
+          .block_text {
+            font-family: $interFontF;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 28px;
+            color: $welcomeText;
+          }
+        }
+
+        .welcome_content_buttons {
+          @extend .flexRow;
+          padding-top: 42px;
+          padding-bottom: 47px;
+
+          .content_button {
+            padding: 17px 52px;
+            margin-right: 51px;
+            @extend .button_yellow;
+            @extend .button;
+            &:hover {
+              background-color: $headerText;
+            }
+          }
+
+          .content_demo-button {
+            background-color: transparent;
+            border: none;
+
+            .button {
+              color: $whiteColor;
+              border-bottom: 1px solid white;
+            }
+          }
+        }
+
+        .welcome_content_list {
+          @extend .flexRow;
+          justify-content: space-between;
+
+          .list_item {
+            list-style-type: none;
+            font-family: $cardoFontF;
+            font-size: 24px;
+            line-height: 29px;
+            letter-spacing: 0.48px;
+          }
+        }
+      }
+
+      .welcome_image {
+        padding-right: 20px;
+      }
+    }
+  }
 }
 .footer {
   flex-shrink: 0;

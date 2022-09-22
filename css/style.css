@@ -8,7 +8,7 @@
 
 
 */
-.flexRow, .header .header_container .header_right-container .header_menu .menu_list, .header .header_container .header_right-container .header_menu, .header .header_container .header_right-container, .header .header_container .header_left-container .header_social, .header .header_container .header_left-container {
+.flexRow, .main .welcome_container .welcome_content .welcome_content_list, .main .welcome_container .welcome_content .welcome_content_buttons, .main .welcome_container, .header .header_container .header_right-container .header_menu .menu_list, .header .header_container .header_right-container .header_menu, .header .header_container .header_right-container, .header .header_container .header_left-container .header_social, .header .header_container .header_left-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18,7 +18,7 @@
           flex-direction: row;
 }
 
-.flexColumn, .wrapper {
+.flexColumn, .main .welcome_container .welcome_content .welcome_content_block, .main .welcome_container .welcome_content, .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28,13 +28,13 @@
           flex-direction: column;
 }
 
-.container, .header .header_container {
+.container, .main .welcome_container, .header .header_container {
   margin: 0 auto;
-  max-width: 1410px;
+  max-width: 1300px;
   padding: 0px 15px;
 }
 
-.button, .header .header_container .header_right-container .header_button {
+.button, .main .welcome_container .welcome_content .welcome_content_buttons .content_button, .header .header_container .header_right-container .header_button {
   display: inline-block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -47,7 +47,7 @@
   text-decoration: none;
 }
 
-.button_yellow, .header .header_container .header_right-container .header_button {
+.button_yellow, .main .welcome_container .welcome_content .welcome_content_buttons .content_button, .header .header_container .header_right-container .header_button {
   background-color: #ffca42;
   border: 2px solid #ffca42;
 }
@@ -62,7 +62,7 @@
 .body {
   height: 100%;
   min-width: 100vw;
-  font-family: Inter;
+  font-family: "Inter";
 }
 
 .wrapper {
@@ -208,6 +208,82 @@
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  margin-top: 110px;
+}
+.main .welcome {
+  background-color: #1b3764;
+}
+.main .welcome_container {
+  padding-top: 40px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.main .welcome_container .welcome_content {
+  color: #fff;
+  width: 560px;
+  padding-left: 20px;
+  padding-top: 150px;
+}
+.main .welcome_container .welcome_content .welcome_content_block .block_subtitle {
+  height: 36px;
+  font-family: "Cardo";
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 36px;
+  letter-spacing: 1.2px;
+  text-transform: capitalize;
+  padding-left: 45px;
+}
+.main .welcome_container .welcome_content .welcome_content_block .block_title {
+  font-family: "Cardo";
+  font-size: 63px;
+  line-height: 78px;
+  letter-spacing: 1.3px;
+  text-transform: capitalize;
+  font-weight: 400;
+  padding: 10px 0 24px 0px;
+}
+.main .welcome_container .welcome_content .welcome_content_block .block_text {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #b4c7e7;
+}
+.main .welcome_container .welcome_content .welcome_content_buttons {
+  padding-top: 42px;
+  padding-bottom: 47px;
+}
+.main .welcome_container .welcome_content .welcome_content_buttons .content_button {
+  padding: 17px 52px;
+  margin-right: 51px;
+}
+.main .welcome_container .welcome_content .welcome_content_buttons .content_button:hover {
+  background-color: #f6f8fc;
+}
+.main .welcome_container .welcome_content .welcome_content_buttons .content_demo-button {
+  background-color: transparent;
+  border: none;
+}
+.main .welcome_container .welcome_content .welcome_content_buttons .content_demo-button .button, .main .welcome_container .welcome_content .welcome_content_buttons .content_demo-button .header .header_container .header_right-container .header_button, .header .header_container .header_right-container .main .welcome_container .welcome_content .welcome_content_buttons .content_demo-button .header_button, .main .welcome_container .welcome_content .welcome_content_buttons .content_demo-button .content_button {
+  color: #fff;
+  border-bottom: 1px solid white;
+}
+.main .welcome_container .welcome_content .welcome_content_list {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.main .welcome_container .welcome_content .welcome_content_list .list_item {
+  list-style-type: none;
+  font-family: "Cardo";
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.48px;
+}
+.main .welcome_container .welcome_image {
+  padding-right: 20px;
 }
 
 .footer {
