@@ -17,7 +17,7 @@
 }
 
 .header {
-  background-color: $blueBackgroundC;
+  background-color: $blueColor;
   top: 0;
   left: 0;
   width: 100%;
@@ -130,9 +130,11 @@
         }
       }
       .header_button {
-        padding: 17px 52px;
-        @extend .button_yellow;
-        @extend .button;
+        @extend %button-yellow;
+
+        .button_yellow {
+          @extend %button;
+        }
         &:hover {
           background-color: $headerText;
         }
@@ -145,7 +147,8 @@
   flex-grow: 1;
   margin-top: 110px;
   .welcome {
-    background-color: $blueBackgroundC;
+    background-color: $blueColor;
+    padding-bottom: 100px;
 
     &_container {
       @extend .container;
@@ -160,10 +163,10 @@
         padding-left: 20px;
         padding-top: 150px;
 
-        .welcome_content_block {
+        .welcome_block-text {
           @extend .flexColumn;
 
-          .block_subtitle {
+          .block-text_subtitle {
             height: 36px;
             font-family: $cardoFontF;
             font-weight: 400;
@@ -171,10 +174,21 @@
             line-height: 36px;
             letter-spacing: 1.2px;
             text-transform: capitalize;
-            padding-left: 45px;
+            padding-left: 50px;
+
+            /* &::before {
+              content: "";
+              display: block;
+              width: 35px;
+              height: 2px;
+              background: $yellowColor;
+              position: absolute;
+              top: 33%;
+              left: 105px;
+            }*/
           }
 
-          .block_title {
+          .block-text_title {
             font-family: $cardoFontF;
             font-size: 63px;
             line-height: 78px;
@@ -184,7 +198,7 @@
             padding: 10px 0 24px 0px;
           }
 
-          .block_text {
+          .block-text_text {
             font-family: $interFontF;
             font-weight: 400;
             font-size: 18px;
@@ -193,42 +207,65 @@
           }
         }
 
-        .welcome_content_buttons {
+        .welcome_block-buttons {
           @extend .flexRow;
           padding-top: 42px;
           padding-bottom: 47px;
 
-          .content_button {
+          .block-buttons_button {
             padding: 17px 52px;
             margin-right: 51px;
-            @extend .button_yellow;
-            @extend .button;
+            @extend %button-yellow;
+
+            .button_yellow {
+              @extend %button;
+            }
             &:hover {
               background-color: $headerText;
             }
           }
 
-          .content_demo-button {
+          .block-buttons_demo-button {
             background-color: transparent;
             border: none;
 
-            .button {
+            &:hover {
+              color: $yellowColor;
+            }
+
+            .button_border-bottom {
               color: $whiteColor;
               border-bottom: 1px solid white;
+              @extend %button;
+              &:hover {
+                color: $yellowColor;
+              }
             }
           }
         }
 
-        .welcome_content_list {
+        .welcome_list {
           @extend .flexRow;
           justify-content: space-between;
+          list-style-type: none;
 
           .list_item {
-            list-style-type: none;
+            background-image: url(/images/Rectangle.png);
+            padding-left: 20px;
             font-family: $cardoFontF;
             font-size: 24px;
             line-height: 29px;
             letter-spacing: 0.48px;
+            @extend .flexColumn;
+
+            span {
+              font-family: $interFontF;
+              font-style: normal;
+              font-weight: 400;
+              font-size: 17px;
+              line-height: 27px;
+              color: $welcomeText;
+            }
           }
         }
       }
@@ -238,7 +275,233 @@
       }
     }
   }
+
+  .book {
+    &_container {
+      @extend .container;
+      @extend .flexColumn;
+
+      .book_main-block {
+        padding: 126px 0px 150px 0px;
+
+        .book_title {
+          font-family: $cardoFontF;
+          padding-bottom: 100px;
+          font-size: 42px;
+          line-height: 50px;
+
+          text-align: center;
+          text-transform: capitalize;
+
+          color: $blueColor;
+        }
+
+        .book_content {
+          @extend .flexRow;
+          justify-content: space-between;
+
+          .content_left-block {
+            @extend .flexRow;
+            padding-right: 48px;
+
+            .left-block_content {
+              padding: 40px 0px 0px 30px;
+
+              .left-block_title {
+                @extend %blockTitle;
+              }
+
+              .left-block_price {
+                font-family: $interFontF;
+                font-size: 21px;
+                line-height: 33px;
+                color: $yellowColor;
+                padding-top: 7px;
+              }
+              .left-block_text {
+                font-family: $interFontF;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 19px;
+                line-height: 28px;
+                color: $greyColor;
+                padding-top: 17px;
+              }
+              .left-block_list {
+                font-family: $cardoFontF;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 29px;
+                color: $blueColor;
+                text-transform: capitalize;
+                padding-top: 13px;
+                list-style-type: none;
+                @extend .flexRow;
+
+                .list_img {
+                  padding-right: 10px;
+                }
+              }
+
+              .left-block_button {
+                margin-top: 27px;
+                @extend %button-white;
+
+                .button_white {
+                  @extend %button;
+                }
+              }
+            }
+          }
+
+          .content_right-block {
+            @extend .flexRow;
+
+            .right-block_title {
+              @extend %blockTitle;
+            }
+            .right-block_content {
+              padding: 40px 0px 0px 30px;
+
+              .right-block_price {
+                font-family: $interFontF;
+                font-size: 21px;
+                line-height: 33px;
+                color: $yellowColor;
+                padding-top: 7px;
+              }
+              .right-block_text {
+                @extend %textInter19px;
+                line-height: 28px;
+                color: $greyColor;
+                padding-top: 17px;
+              }
+              .right-block_list {
+                font-family: $cardoFontF;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 29px;
+                color: $blueColor;
+                text-transform: capitalize;
+                padding-top: 13px;
+                list-style-type: none;
+                @extend .flexRow;
+
+                .list_img {
+                  padding-right: 10px;
+                }
+              }
+
+              .right-block_button {
+                margin-top: 27px;
+                @extend %button-white;
+
+                .button_white {
+                  @extend %button;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .about {
+    background-color: $aboutBgColor;
+
+    &_container {
+      @extend .container;
+      padding-top: 150px;
+      padding-bottom: 140px;
+
+      .about_main-block {
+        @extend .flexRow;
+
+        .about_content {
+          padding-left: 150px;
+          .about_title {
+            @extend %blockTitle;
+            padding: 55px 0px 59px 0px;
+          }
+
+          .about_text {
+            @extend %textInter19px;
+            color: $greyColor;
+            padding-bottom: 33px;
+          }
+
+          .about_list {
+            @extend .flexRow;
+            justify-content: space-between;
+            padding-bottom: 54px;
+
+            .list_item {
+              @extend .flexColumn;
+              .item_number {
+                @extend %numberCardo54px;
+                color: $blueColor;
+              }
+
+              .item_text {
+                font-family: "Inter";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 22px;
+                color: $greyColor;
+                text-transform: capitalize;
+              }
+            }
+          }
+
+          .about_QRcode {
+            background: $blueColor;
+            @extend .flexRow;
+            width: 484px;
+            height: 161px;
+            justify-content: space-between;
+
+            .QRcode_img {
+              margin: 15px 40px 16px 20px;
+            }
+
+            .QRcode_info {
+              @extend .flexColumn;
+              padding-right: 20px;
+
+              .info_name {
+                font-family: "Cardo";
+                font-style: normal;
+                font-weight: 400;
+                font-size: 22px;
+                line-height: 26px;
+                color: $yellowColor;
+                padding-top: 37px;
+              }
+              .info_mail {
+                color: $welcomeText;
+                @extend %textInter18px;
+                line-height: 28px;
+                letter-spacing: 0.19px;
+                padding-top: 10px;
+              }
+              .info_phone {
+                color: $welcomeText;
+                @extend %textInter18px;
+                line-height: 28px;
+                letter-spacing: 0.19px;
+                padding-top: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
+
 .footer {
   flex-shrink: 0;
 }

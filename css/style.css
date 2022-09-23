@@ -8,7 +8,38 @@
 
 
 */
-.flexRow, .main .welcome_container .welcome_content .welcome_content_list, .main .welcome_container .welcome_content .welcome_content_buttons, .main .welcome_container, .header .header_container .header_right-container .header_menu .menu_list, .header .header_container .header_right-container .header_menu, .header .header_container .header_right-container, .header .header_container .header_left-container .header_social, .header .header_container .header_left-container {
+.main .about_container .about_main-block .about_content .about_title, .main .book_container .book_main-block .book_content .content_right-block .right-block_title, .main .book_container .book_main-block .book_content .content_left-block .left-block_content .left-block_title {
+  font-family: "Cardo";
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: 0.32px;
+  color: #1b3764;
+  text-transform: capitalize;
+}
+
+.main .about_container .about_main-block .about_content .about_text, .main .book_container .book_main-block .book_content .content_right-block .right-block_content .right-block_text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+}
+
+.main .about_container .about_main-block .about_content .about_QRcode .QRcode_info .info_phone, .main .about_container .about_main-block .about_content .about_QRcode .QRcode_info .info_mail {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.main .about_container .about_main-block .about_content .about_list .list_item .item_number {
+  font-family: "Cardo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 77px;
+}
+
+.flexRow, .main .about_container .about_main-block .about_content .about_QRcode, .main .about_container .about_main-block .about_content .about_list, .main .about_container .about_main-block, .main .book_container .book_main-block .book_content .content_right-block .right-block_content .right-block_list, .main .book_container .book_main-block .book_content .content_right-block, .main .book_container .book_main-block .book_content .content_left-block .left-block_content .left-block_list, .main .book_container .book_main-block .book_content .content_left-block, .main .book_container .book_main-block .book_content, .main .welcome_container .welcome_content .welcome_list, .main .welcome_container .welcome_content .welcome_block-buttons, .main .welcome_container, .header .header_container .header_right-container .header_menu .menu_list, .header .header_container .header_right-container .header_menu, .header .header_container .header_right-container, .header .header_container .header_left-container .header_social, .header .header_container .header_left-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18,7 +49,7 @@
           flex-direction: row;
 }
 
-.flexColumn, .main .welcome_container .welcome_content .welcome_content_block, .main .welcome_container .welcome_content, .wrapper {
+.flexColumn, .main .about_container .about_main-block .about_content .about_QRcode .QRcode_info, .main .about_container .about_main-block .about_content .about_list .list_item, .main .book_container, .main .welcome_container .welcome_content .welcome_list .list_item, .main .welcome_container .welcome_content .welcome_block-text, .main .welcome_container .welcome_content, .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28,13 +59,13 @@
           flex-direction: column;
 }
 
-.container, .main .welcome_container, .header .header_container {
+.container, .main .about_container, .main .book_container, .main .welcome_container, .header .header_container {
   margin: 0 auto;
   max-width: 1300px;
   padding: 0px 15px;
 }
 
-.button, .main .welcome_container .welcome_content .welcome_content_buttons .content_button, .header .header_container .header_right-container .header_button {
+.main .book_container .book_main-block .book_content .content_right-block .right-block_content .right-block_button .button_white, .main .book_container .book_main-block .book_content .content_left-block .left-block_content .left-block_button .button_white, .main .welcome_container .welcome_content .welcome_block-buttons .block-buttons_demo-button .button_border-bottom, .main .welcome_container .welcome_content .welcome_block-buttons .block-buttons_button .button_yellow, .header .header_container .header_right-container .header_button .button_yellow {
   display: inline-block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -47,9 +78,16 @@
   text-decoration: none;
 }
 
-.button_yellow, .main .welcome_container .welcome_content .welcome_content_buttons .content_button, .header .header_container .header_right-container .header_button {
+.main .welcome_container .welcome_content .welcome_block-buttons .block-buttons_button, .header .header_container .header_right-container .header_button {
   background-color: #ffca42;
   border: 2px solid #ffca42;
+  padding: 17px 52px;
+}
+
+.main .book_container .book_main-block .book_content .content_right-block .right-block_content .right-block_button, .main .book_container .book_main-block .book_content .content_left-block .left-block_content .left-block_button {
+  background-color: #fff;
+  border: 2px solid #ffca42;
+  padding: 17px 52px;
 }
 
 * {
@@ -197,9 +235,6 @@
           transform: scale(2);
   cursor: pointer;
 }
-.header .header_container .header_right-container .header_button {
-  padding: 17px 52px;
-}
 .header .header_container .header_right-container .header_button:hover {
   background-color: #f6f8fc;
 }
@@ -212,6 +247,7 @@
 }
 .main .welcome {
   background-color: #1b3764;
+  padding-bottom: 100px;
 }
 .main .welcome_container {
   padding-top: 40px;
@@ -225,7 +261,7 @@
   padding-left: 20px;
   padding-top: 150px;
 }
-.main .welcome_container .welcome_content .welcome_content_block .block_subtitle {
+.main .welcome_container .welcome_content .welcome_block-text .block-text_subtitle {
   height: 36px;
   font-family: "Cardo";
   font-weight: 400;
@@ -233,9 +269,19 @@
   line-height: 36px;
   letter-spacing: 1.2px;
   text-transform: capitalize;
-  padding-left: 45px;
+  padding-left: 50px;
+  /* &::before {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 2px;
+    background: $yellowColor;
+    position: absolute;
+    top: 33%;
+    left: 105px;
+  }*/
 }
-.main .welcome_container .welcome_content .welcome_content_block .block_title {
+.main .welcome_container .welcome_content .welcome_block-text .block-text_title {
   font-family: "Cardo";
   font-size: 63px;
   line-height: 78px;
@@ -244,46 +290,220 @@
   font-weight: 400;
   padding: 10px 0 24px 0px;
 }
-.main .welcome_container .welcome_content .welcome_content_block .block_text {
+.main .welcome_container .welcome_content .welcome_block-text .block-text_text {
   font-family: "Inter";
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
   color: #b4c7e7;
 }
-.main .welcome_container .welcome_content .welcome_content_buttons {
+.main .welcome_container .welcome_content .welcome_block-buttons {
   padding-top: 42px;
   padding-bottom: 47px;
 }
-.main .welcome_container .welcome_content .welcome_content_buttons .content_button {
+.main .welcome_container .welcome_content .welcome_block-buttons .block-buttons_button {
   padding: 17px 52px;
   margin-right: 51px;
 }
-.main .welcome_container .welcome_content .welcome_content_buttons .content_button:hover {
+.main .welcome_container .welcome_content .welcome_block-buttons .block-buttons_button:hover {
   background-color: #f6f8fc;
 }
-.main .welcome_container .welcome_content .welcome_content_buttons .content_demo-button {
+.main .welcome_container .welcome_content .welcome_block-buttons .block-buttons_demo-button {
   background-color: transparent;
   border: none;
 }
-.main .welcome_container .welcome_content .welcome_content_buttons .content_demo-button .button, .main .welcome_container .welcome_content .welcome_content_buttons .content_demo-button .header .header_container .header_right-container .header_button, .header .header_container .header_right-container .main .welcome_container .welcome_content .welcome_content_buttons .content_demo-button .header_button, .main .welcome_container .welcome_content .welcome_content_buttons .content_demo-button .content_button {
+.main .welcome_container .welcome_content .welcome_block-buttons .block-buttons_demo-button:hover {
+  color: #ffca42;
+}
+.main .welcome_container .welcome_content .welcome_block-buttons .block-buttons_demo-button .button_border-bottom {
   color: #fff;
   border-bottom: 1px solid white;
 }
-.main .welcome_container .welcome_content .welcome_content_list {
+.main .welcome_container .welcome_content .welcome_block-buttons .block-buttons_demo-button .button_border-bottom:hover {
+  color: #ffca42;
+}
+.main .welcome_container .welcome_content .welcome_list {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-.main .welcome_container .welcome_content .welcome_content_list .list_item {
   list-style-type: none;
+}
+.main .welcome_container .welcome_content .welcome_list .list_item {
+  background-image: url(/images/Rectangle.png);
+  padding-left: 20px;
   font-family: "Cardo";
   font-size: 24px;
   line-height: 29px;
   letter-spacing: 0.48px;
 }
+.main .welcome_container .welcome_content .welcome_list .list_item span {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 27px;
+  color: #b4c7e7;
+}
 .main .welcome_container .welcome_image {
   padding-right: 20px;
+}
+.main .book_container .book_main-block {
+  padding: 126px 0px 150px 0px;
+}
+.main .book_container .book_main-block .book_title {
+  font-family: "Cardo";
+  padding-bottom: 100px;
+  font-size: 42px;
+  line-height: 50px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #1b3764;
+}
+.main .book_container .book_main-block .book_content {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.main .book_container .book_main-block .book_content .content_left-block {
+  padding-right: 48px;
+}
+.main .book_container .book_main-block .book_content .content_left-block .left-block_content {
+  padding: 40px 0px 0px 30px;
+}
+.main .book_container .book_main-block .book_content .content_left-block .left-block_content .left-block_price {
+  font-family: "Inter";
+  font-size: 21px;
+  line-height: 33px;
+  color: #ffca42;
+  padding-top: 7px;
+}
+.main .book_container .book_main-block .book_content .content_left-block .left-block_content .left-block_text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 28px;
+  color: #969aa0;
+  padding-top: 17px;
+}
+.main .book_container .book_main-block .book_content .content_left-block .left-block_content .left-block_list {
+  font-family: "Cardo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1b3764;
+  text-transform: capitalize;
+  padding-top: 13px;
+  list-style-type: none;
+}
+.main .book_container .book_main-block .book_content .content_left-block .left-block_content .left-block_list .list_img {
+  padding-right: 10px;
+}
+.main .book_container .book_main-block .book_content .content_left-block .left-block_content .left-block_button {
+  margin-top: 27px;
+}
+.main .book_container .book_main-block .book_content .content_right-block .right-block_content {
+  padding: 40px 0px 0px 30px;
+}
+.main .book_container .book_main-block .book_content .content_right-block .right-block_content .right-block_price {
+  font-family: "Inter";
+  font-size: 21px;
+  line-height: 33px;
+  color: #ffca42;
+  padding-top: 7px;
+}
+.main .book_container .book_main-block .book_content .content_right-block .right-block_content .right-block_text {
+  line-height: 28px;
+  color: #969aa0;
+  padding-top: 17px;
+}
+.main .book_container .book_main-block .book_content .content_right-block .right-block_content .right-block_list {
+  font-family: "Cardo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1b3764;
+  text-transform: capitalize;
+  padding-top: 13px;
+  list-style-type: none;
+}
+.main .book_container .book_main-block .book_content .content_right-block .right-block_content .right-block_list .list_img {
+  padding-right: 10px;
+}
+.main .book_container .book_main-block .book_content .content_right-block .right-block_content .right-block_button {
+  margin-top: 27px;
+}
+.main .about {
+  background-color: #f5f8fc;
+}
+.main .about_container {
+  padding-top: 150px;
+  padding-bottom: 140px;
+}
+.main .about_container .about_main-block .about_content {
+  padding-left: 150px;
+}
+.main .about_container .about_main-block .about_content .about_title {
+  padding: 55px 0px 59px 0px;
+}
+.main .about_container .about_main-block .about_content .about_text {
+  color: #969aa0;
+  padding-bottom: 33px;
+}
+.main .about_container .about_main-block .about_content .about_list {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 54px;
+}
+.main .about_container .about_main-block .about_content .about_list .list_item .item_number {
+  color: #1b3764;
+}
+.main .about_container .about_main-block .about_content .about_list .list_item .item_text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  color: #969aa0;
+  text-transform: capitalize;
+}
+.main .about_container .about_main-block .about_content .about_QRcode {
+  background: #1b3764;
+  width: 484px;
+  height: 161px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.main .about_container .about_main-block .about_content .about_QRcode .QRcode_img {
+  margin: 15px 40px 16px 20px;
+}
+.main .about_container .about_main-block .about_content .about_QRcode .QRcode_info {
+  padding-right: 20px;
+}
+.main .about_container .about_main-block .about_content .about_QRcode .QRcode_info .info_name {
+  font-family: "Cardo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #ffca42;
+  padding-top: 37px;
+}
+.main .about_container .about_main-block .about_content .about_QRcode .QRcode_info .info_mail {
+  color: #b4c7e7;
+  line-height: 28px;
+  letter-spacing: 0.19px;
+  padding-top: 10px;
+}
+.main .about_container .about_main-block .about_content .about_QRcode .QRcode_info .info_phone {
+  color: #b4c7e7;
+  line-height: 28px;
+  letter-spacing: 0.19px;
+  padding-top: 5px;
 }
 
 .footer {

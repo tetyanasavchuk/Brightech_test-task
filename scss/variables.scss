@@ -9,12 +9,44 @@
 $yellowColor: #ffca42;
 $themeMargin: 0 auto;
 $headerText: #f6f8fc;
-$buttonText: #1b3764;
+$blueColor: #1b3764;
 $whiteColor: #fff;
 $cardoFontF: "Cardo";
 $interFontF: "Inter";
 $welcomeText: #b4c7e7;
-$blueBackgroundC: #1b3764;
+$greyColor: #969aa0;
+$aboutBgColor: #f5f8fc;
+
+%blockTitle {
+  font-family: $cardoFontF;
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: 0.32px;
+  color: $blueColor;
+  text-transform: capitalize;
+}
+
+%textInter19px {
+  font-family: $interFontF;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+}
+
+%textInter18px {
+  font-family: $interFontF;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+%numberCardo54px {
+  font-family: "Cardo";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 77px;
+}
 
 .flexRow {
   display: flex;
@@ -32,20 +64,26 @@ $blueBackgroundC: #1b3764;
   padding: 0px 15px;
 }
 
-.button {
+%button {
   display: inline-block;
   box-sizing: border-box;
   font-family: Cardo;
   font-size: 19px;
   text-transform: capitalize;
-  color: $buttonText;
-
+  color: $blueColor;
   line-height: 28px;
   letter-spacing: 0.57px;
   text-decoration: none;
 }
 
-.button_yellow {
+%button-yellow {
   background-color: $yellowColor;
-  border: 2px solid #ffca42;
+  border: 2px solid $yellowColor;
+  padding: 17px 52px;
+}
+
+%button-white {
+  background-color: $whiteColor;
+  border: 2px solid $yellowColor;
+  padding: 17px 52px;
 }
