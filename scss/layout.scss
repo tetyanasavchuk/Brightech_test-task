@@ -504,4 +504,130 @@
 
 .footer {
   flex-shrink: 0;
+  background-color: $blueColor;
+  width: 100%;
+  min-height: 486px;
+
+  &_container {
+    @extend .container;
+    padding: 92px 0px 24px 0px;
+  }
+  &_content {
+    @extend .flexRow;
+    justify-content: space-between;
+    .footer_logo {
+      padding-bottom: 20px;
+    }
+    .footer_social {
+      @extend .flexRow;
+
+      .social_link {
+        width: 55px;
+        height: 55px;
+        border: 1px solid$yellowColor;
+        margin-right: 10px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+      }
+    }
+
+    .explore_block {
+      @extend .flexColumn;
+
+      .explore_title {
+        @extend %footerTitle;
+      }
+
+      .explore_list {
+        list-style-type: none;
+        text-transform: capitalize;
+
+        .explore_item {
+          @extend .flexRow;
+          padding-bottom: 9px;
+
+          .item_dotes {
+            @extend %yellowDotes;
+          }
+
+          .item_name {
+            @extend %textInter18px;
+            color: $welcomeText;
+            line-height: 31px;
+            letter-spacing: 0.18px;
+          }
+        }
+      }
+    }
+
+    .utility_block {
+      @extend .flexColumn;
+
+      .utility_title {
+        @extend %footerTitle;
+      }
+
+      .utility_list {
+        list-style-type: none;
+        text-transform: capitalize;
+
+        .utility_item {
+          @extend .flexRow;
+          padding-bottom: 9px;
+
+          .item_dotes {
+            @extend %yellowDotes;
+          }
+
+          .item_name {
+            @extend %textInter18px;
+            color: $welcomeText;
+            line-height: 31px;
+            letter-spacing: 0.18px;
+          }
+        }
+      }
+    }
+
+    .keep_block {
+      @extend .flexColumn;
+      width: 320px;
+      margin-right: 50px;
+
+      .keep_title {
+        @extend %footerTitle;
+      }
+
+      .keep_item {
+        @extend .flexRow;
+        justify-content: space-between;
+        text-transform: capitalize;
+        padding-bottom: 18px;
+
+        .item_name {
+          @extend %textCardo18px;
+        }
+
+        .item_text {
+          @extend %textInter17px;
+        }
+      }
+    }
+  }
+  .footer_powered {
+    @extend .flexRow;
+
+    justify-content: center;
+    padding-top: 95px;
+
+    .blue_text {
+      @extend %textInter17px;
+    }
+
+    .white_text {
+      @extend %textInter17px;
+      color: $whiteColor;
+    }
+  }
 }

@@ -17,6 +17,16 @@
   text-transform: capitalize;
 }
 
+.footer_content .keep_block .keep_title, .footer_content .utility_block .utility_title, .footer_content .explore_block .explore_title {
+  font-family: "Cardo";
+  font-size: 24px;
+  line-height: 34px;
+  letter-spacing: 0.384px;
+  text-transform: capitalize;
+  color: #fff;
+  padding-bottom: 24px;
+}
+
 .main .about_container .about_main-block .about_content .about_text, .main .book_container .book_main-block .book_content .content_right-block .right-block_content .right-block_text {
   font-family: "Inter";
   font-style: normal;
@@ -24,11 +34,34 @@
   font-size: 19px;
 }
 
-.main .about_container .about_main-block .about_content .about_QRcode .QRcode_info .info_phone, .main .about_container .about_main-block .about_content .about_QRcode .QRcode_info .info_mail {
+.footer_content .utility_block .utility_list .utility_item .item_name, .footer_content .explore_block .explore_list .explore_item .item_name, .main .about_container .about_main-block .about_content .about_QRcode .QRcode_info .info_phone, .main .about_container .about_main-block .about_content .about_QRcode .QRcode_info .info_mail {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
+}
+
+.footer_content .keep_block .keep_item .item_name {
+  font-family: "Cardo";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0.36px;
+  color: #fff;
+}
+
+.footer .footer_powered .white_text, .footer .footer_powered .blue_text, .footer_content .keep_block .keep_item .item_text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 27px;
+  color: #b4c7e7;
+}
+
+.footer_content .utility_block .utility_list .utility_item .item_dotes, .footer_content .explore_block .explore_list .explore_item .item_dotes {
+  color: #ffca42;
+  padding-right: 11px;
 }
 
 .main .about_container .about_main-block .about_content .about_list .list_item .item_number {
@@ -39,7 +72,7 @@
   line-height: 77px;
 }
 
-.flexRow, .main .about_container .about_main-block .about_content .about_QRcode, .main .about_container .about_main-block .about_content .about_list, .main .about_container .about_main-block, .main .book_container .book_main-block .book_content .content_right-block .right-block_content .right-block_list, .main .book_container .book_main-block .book_content .content_right-block, .main .book_container .book_main-block .book_content .content_left-block .left-block_content .left-block_list, .main .book_container .book_main-block .book_content .content_left-block, .main .book_container .book_main-block .book_content, .main .welcome_container .welcome_content .welcome_list, .main .welcome_container .welcome_content .welcome_block-buttons, .main .welcome_container, .header .header_container .header_right-container .header_menu .menu_list, .header .header_container .header_right-container .header_menu, .header .header_container .header_right-container, .header .header_container .header_left-container .header_social, .header .header_container .header_left-container {
+.flexRow, .footer .footer_powered, .footer_content .keep_block .keep_item, .footer_content .utility_block .utility_list .utility_item, .footer_content .explore_block .explore_list .explore_item, .footer_content .footer_social, .footer_content, .main .about_container .about_main-block .about_content .about_QRcode, .main .about_container .about_main-block .about_content .about_list, .main .about_container .about_main-block, .main .book_container .book_main-block .book_content .content_right-block .right-block_content .right-block_list, .main .book_container .book_main-block .book_content .content_right-block, .main .book_container .book_main-block .book_content .content_left-block .left-block_content .left-block_list, .main .book_container .book_main-block .book_content .content_left-block, .main .book_container .book_main-block .book_content, .main .welcome_container .welcome_content .welcome_list, .main .welcome_container .welcome_content .welcome_block-buttons, .main .welcome_container, .header .header_container .header_right-container .header_menu .menu_list, .header .header_container .header_right-container .header_menu, .header .header_container .header_right-container, .header .header_container .header_left-container .header_social, .header .header_container .header_left-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,7 +82,7 @@
           flex-direction: row;
 }
 
-.flexColumn, .main .about_container .about_main-block .about_content .about_QRcode .QRcode_info, .main .about_container .about_main-block .about_content .about_list .list_item, .main .book_container, .main .welcome_container .welcome_content .welcome_list .list_item, .main .welcome_container .welcome_content .welcome_block-text, .main .welcome_container .welcome_content, .wrapper {
+.flexColumn, .footer_content .keep_block, .footer_content .utility_block, .footer_content .explore_block, .main .about_container .about_main-block .about_content .about_QRcode .QRcode_info, .main .about_container .about_main-block .about_content .about_list .list_item, .main .book_container, .main .welcome_container .welcome_content .welcome_list .list_item, .main .welcome_container .welcome_content .welcome_block-text, .main .welcome_container .welcome_content, .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -59,7 +92,7 @@
           flex-direction: column;
 }
 
-.container, .main .about_container, .main .book_container, .main .welcome_container, .header .header_container {
+.container, .footer_container, .main .about_container, .main .book_container, .main .welcome_container, .header .header_container {
   margin: 0 auto;
   max-width: 1300px;
   padding: 0px 15px;
@@ -509,4 +542,77 @@
 .footer {
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  background-color: #1b3764;
+  width: 100%;
+  min-height: 486px;
+}
+.footer_container {
+  padding: 92px 0px 24px 0px;
+}
+.footer_content {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.footer_content .footer_logo {
+  padding-bottom: 20px;
+}
+.footer_content .footer_social .social_link {
+  width: 55px;
+  height: 55px;
+  border: 1px solid #ffca42;
+  margin-right: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.footer_content .explore_block .explore_list {
+  list-style-type: none;
+  text-transform: capitalize;
+}
+.footer_content .explore_block .explore_list .explore_item {
+  padding-bottom: 9px;
+}
+.footer_content .explore_block .explore_list .explore_item .item_name {
+  color: #b4c7e7;
+  line-height: 31px;
+  letter-spacing: 0.18px;
+}
+.footer_content .utility_block .utility_list {
+  list-style-type: none;
+  text-transform: capitalize;
+}
+.footer_content .utility_block .utility_list .utility_item {
+  padding-bottom: 9px;
+}
+.footer_content .utility_block .utility_list .utility_item .item_name {
+  color: #b4c7e7;
+  line-height: 31px;
+  letter-spacing: 0.18px;
+}
+.footer_content .keep_block {
+  width: 320px;
+  margin-right: 50px;
+}
+.footer_content .keep_block .keep_item {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-transform: capitalize;
+  padding-bottom: 18px;
+}
+.footer .footer_powered {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 95px;
+}
+.footer .footer_powered .white_text {
+  color: #fff;
 }

@@ -26,6 +26,16 @@ $aboutBgColor: #f5f8fc;
   text-transform: capitalize;
 }
 
+%footerTitle {
+  font-family: $cardoFontF;
+  font-size: 24px;
+  line-height: 34px;
+  letter-spacing: 0.384px;
+  text-transform: capitalize;
+  color: $whiteColor;
+  padding-bottom: 24px;
+}
+
 %textInter19px {
   font-family: $interFontF;
   font-style: normal;
@@ -38,6 +48,32 @@ $aboutBgColor: #f5f8fc;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
+}
+
+%textCardo18px {
+  font-family: $cardoFontF;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+
+  letter-spacing: 0.36px;
+
+  color: $whiteColor;
+}
+
+%textInter17px {
+  font-family: $interFontF;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 27px;
+  color: $welcomeText;
+}
+
+%yellowDotes {
+  color: $yellowColor;
+  padding-right: 11px;
 }
 
 %numberCardo54px {
