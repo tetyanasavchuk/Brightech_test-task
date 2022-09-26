@@ -6,7 +6,6 @@
 
 .body {
   height: 100%;
-  min-width: 100vw;
   font-family: $interFontF;
 }
 
@@ -14,15 +13,13 @@
   min-height: 100%;
   overflow: hidden;
   @extend .flexColumn;
+  width: 100%;
 }
 
 .header {
   background-color: $blueColor;
-  top: 0;
-  left: 0;
-  width: 100%;
-  position: absolute;
-  margin: $themeMargin;
+  min-height: 110px;
+  padding-bottom: 100px;
 
   .header_container {
     min-height: 110px;
@@ -49,9 +46,23 @@
         padding-right: 40px;
       }
       .header_social {
-        width: 160px;
         @extend .flexRow;
         justify-content: space-between;
+
+        .social_link {
+          width: 45px;
+          height: 45px;
+          background-color: $whiteColor;
+          margin-right: 10px;
+          align-items: center;
+          justify-content: center;
+          display: flex;
+
+          &:hover {
+            border: 1px solid$yellowColor;
+            background-color: transparent;
+          }
+        }
       }
     }
     .header_right-container {
@@ -145,7 +156,7 @@
 
 .main {
   flex-grow: 1;
-  margin-top: 110px;
+
   .welcome {
     background-color: $blueColor;
     padding-bottom: 100px;
@@ -285,15 +296,8 @@
         padding: 126px 0px 150px 0px;
 
         .book_title {
-          font-family: $cardoFontF;
-          padding-bottom: 100px;
-          font-size: 42px;
-          line-height: 50px;
-
-          text-align: center;
-          text-transform: capitalize;
-
-          color: $blueColor;
+          @extend %sectionTitle;
+          padding-bottom: 96px;
         }
 
         .book_content {
@@ -348,6 +352,10 @@
                 margin-top: 27px;
                 @extend %button-white;
 
+                &:hover {
+                  @extend %button-yellow;
+                }
+
                 .button_white {
                   @extend %button;
                 }
@@ -398,6 +406,10 @@
                 margin-top: 27px;
                 @extend %button-white;
 
+                &:hover {
+                  @extend %button-yellow;
+                }
+
                 .button_white {
                   @extend %button;
                 }
@@ -421,8 +433,9 @@
 
         .about_content {
           padding-left: 150px;
+
           .about_title {
-            @extend %blockTitle;
+            @extend %sectionTitle;
             padding: 55px 0px 59px 0px;
           }
 
@@ -500,6 +513,66 @@
       }
     }
   }
+  .subscribe {
+    background: $whiteColor;
+
+    &_container {
+      @extend .container;
+      @extend .flexColumn;
+      background-color: $yellowColor;
+      box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.18);
+      border-radius: 5px;
+      height: 489px;
+      margin: 120px auto;
+    }
+
+    &_main-block {
+      padding: 96px 150px 115px 150px;
+      @extend .flexColumn;
+    }
+
+    .subscribe_title {
+      @extend %sectionTitle;
+      padding-bottom: 51px;
+    }
+
+    .subscribe_text {
+      @extend %textInter18px;
+      margin: $themeMargin;
+      color: $blueColor;
+      width: 550px;
+      padding-bottom: 49px;
+      text-align: center;
+    }
+
+    .subscribe_subscribe-block {
+      .mail_field {
+        height: 70px;
+        width: 656px;
+        background: $whiteColor;
+        border: 1px solid #dce1e9;
+        margin-right: 16px;
+
+        &::placeholder {
+          @extend %textInter18px;
+          color: $welcomeText;
+          text-transform: capitalize;
+          padding-left: 39px;
+        }
+      }
+
+      .subscribe_button {
+        box-sizing: border-box;
+        position: absolute;
+        height: 68px;
+        width: 328px;
+        background: $blueColor;
+        border: 2px solid $blueColor;
+        @extend %textInter18px;
+        color: $whiteColor;
+      }
+    }
+  }
 }
 
 .footer {
@@ -529,6 +602,11 @@
         align-items: center;
         justify-content: center;
         display: flex;
+
+        &:hover {
+          background-color: $yellowColor;
+          border: none;
+        }
       }
     }
 
@@ -592,8 +670,7 @@
 
     .keep_block {
       @extend .flexColumn;
-      width: 320px;
-      margin-right: 50px;
+      width: 400px;
 
       .keep_title {
         @extend %footerTitle;
@@ -607,10 +684,16 @@
 
         .item_name {
           @extend %textCardo18px;
+          width: 81px;
+          margin-right: 30px;
         }
 
         .item_text {
           @extend %textInter17px;
+          width: 320px;
+          display: flex;
+
+          justify-items: start;
         }
       }
     }
