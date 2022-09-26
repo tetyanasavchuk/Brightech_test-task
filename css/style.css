@@ -17,7 +17,7 @@
   text-transform: capitalize;
 }
 
-.main .subscribe .subscribe_title, .main .about_container .about_main-block .about_content .about_title, .main .book_container .book_main-block .book_title {
+.main .articles_container .articles_title, .main .subscribe .subscribe_title, .main .about_container .about_main-block .about_content .about_title, .main .book_container .book_main-block .book_title {
   font-family: "Cardo";
   font-style: normal;
   font-weight: 400;
@@ -131,7 +131,7 @@
           flex-direction: row;
 }
 
-.flexColumn, .footer_content .keep_block, .footer_content .utility_block, .footer_content .explore_block, .main .subscribe_main-block, .main .subscribe_container, .main .about_container .about_main-block .about_content .about_QRcode .QRcode_info, .main .about_container .about_main-block .about_content .about_list .list_item, .main .book_container, .main .welcome_container .welcome_content .welcome_list .list_item, .main .welcome_container .welcome_content .welcome_block-text, .main .welcome_container .welcome_content, .wrapper {
+.flexColumn, .footer_content .keep_block, .footer_content .utility_block, .footer_content .explore_block, .main .articles_container, .main .subscribe_main-block, .main .subscribe_container, .main .about_container .about_main-block .about_content .about_QRcode .QRcode_info, .main .about_container .about_main-block .about_content .about_list .list_item, .main .book_container, .main .welcome_container .welcome_content .welcome_list .list_item, .main .welcome_container .welcome_content .welcome_block-text, .main .welcome_container .welcome_content, .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -141,7 +141,7 @@
           flex-direction: column;
 }
 
-.container, .footer_container, .main .subscribe_container, .main .about_container, .main .book_container, .main .welcome_container, .header .header_container {
+.container, .footer_container, .main .articles_container, .main .subscribe_container, .main .about_container, .main .book_container, .main .welcome_container, .header .header_container {
   margin: 0 auto;
   max-width: 1300px;
 }
@@ -650,6 +650,12 @@
   text-transform: capitalize;
   padding-left: 39px;
 }
+.main .subscribe .subscribe_subscribe-block .mail_field:hover {
+  background: #b4c7e7;
+  cursor: pointer;
+  border: 1px solid #1b3764;
+  color: #1b3764;
+}
 .main .subscribe .subscribe_subscribe-block .subscribe_button {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -659,6 +665,28 @@
   background: #1b3764;
   border: 2px solid #1b3764;
   color: #fff;
+}
+.main .subscribe .subscribe_subscribe-block .subscribe_button:hover {
+  background-color: #f6f8fc;
+  color: #1b3764;
+}
+.main .articles {
+  background: #f4f8ff;
+  height: 1045px;
+}
+.main .articles_container .articles_title {
+  color: #1b3764;
+  padding-bottom: 96px;
+}
+.main .articles_container .articles_swiper {
+  width: 1300px;
+  height: 660px;
+}
+.main .articles_container .articles_swiper .swiper_wrapper .swiper-slide .slider_image {
+  text-align: center;
+}
+.main .articles_container .articles_swiper .swiper_wrapper .swiper-slide .slider_image .image_slide-img {
+  max-width: 100%;
 }
 
 .footer {
