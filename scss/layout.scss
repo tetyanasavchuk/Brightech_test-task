@@ -590,18 +590,19 @@
     height: 1045px;
 
     &_container {
+      min-width: 0;
       @extend .container;
-      @extend .flexColumn;
 
       .articles_title {
         @extend %sectionTitle;
         color: $blueColor;
         padding-bottom: 96px;
+        padding-top: 126px;
       }
 
       .articles_swiper {
         width: 1300px;
-        height: 660px;
+        height: 600px;
         .swiper_wrapper {
           .swiper-slide {
             .slider_image {

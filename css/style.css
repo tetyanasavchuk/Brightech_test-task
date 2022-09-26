@@ -1,13 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cardo&family=Inter&display=swap");
-/*
-
-.flex_s_b{
-    justify-content: space-between; 
-}
-
-
-*/
 .main .book_container .book_main-block .book_content .content_right-block .right-block_title, .main .book_container .book_main-block .book_content .content_left-block .left-block_content .left-block_title {
   font-family: "Cardo";
   font-size: 32px;
@@ -131,7 +123,7 @@
           flex-direction: row;
 }
 
-.flexColumn, .footer_content .keep_block, .footer_content .utility_block, .footer_content .explore_block, .main .articles_container, .main .subscribe_main-block, .main .subscribe_container, .main .about_container .about_main-block .about_content .about_QRcode .QRcode_info, .main .about_container .about_main-block .about_content .about_list .list_item, .main .book_container, .main .welcome_container .welcome_content .welcome_list .list_item, .main .welcome_container .welcome_content .welcome_block-text, .main .welcome_container .welcome_content, .wrapper {
+.flexColumn, .footer_content .keep_block, .footer_content .utility_block, .footer_content .explore_block, .main .subscribe_main-block, .main .subscribe_container, .main .about_container .about_main-block .about_content .about_QRcode .QRcode_info, .main .about_container .about_main-block .about_content .about_list .list_item, .main .book_container, .main .welcome_container .welcome_content .welcome_list .list_item, .main .welcome_container .welcome_content .welcome_block-text, .main .welcome_container .welcome_content, .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -674,13 +666,17 @@
   background: #f4f8ff;
   height: 1045px;
 }
+.main .articles_container {
+  min-width: 0;
+}
 .main .articles_container .articles_title {
   color: #1b3764;
   padding-bottom: 96px;
+  padding-top: 126px;
 }
 .main .articles_container .articles_swiper {
   width: 1300px;
-  height: 660px;
+  height: 600px;
 }
 .main .articles_container .articles_swiper .swiper_wrapper .swiper-slide .slider_image {
   text-align: center;
