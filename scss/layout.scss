@@ -29,15 +29,6 @@
     @extend .container;
     justify-content: space-between;
 
-    @include respond-to(handhelds) {
-      width: 300px;
-    }
-    @include respond-to(medium-screens) {
-      width: 700px;
-    }
-    @include respond-to(wide-screens) {
-      width: 100%;
-    }
     .header_left-container {
       @extend .flexRow;
       justify-content: flex-start;
@@ -100,12 +91,6 @@
           }
           &::after {
             top: 0.8rem;
-          }
-          @include respond-to(handhelds) {
-            display: flex;
-          }
-          @include respond-to(wide-screens) {
-            display: none;
           }
         }
 
@@ -601,14 +586,34 @@
       }
 
       .articles_swiper {
-        width: 1300px;
-        height: 600px;
+        width: 100%;
+        height: 100%;
         .swiper_wrapper {
           .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
             .slider_image {
               text-align: center;
               .image_slide-img {
                 max-width: 100%;
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
               }
             }
           }
